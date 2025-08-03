@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Chat App</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import the GUN database library from a CDN. GUN enables real‑time peer‑to‑peer data
+         synchronization so our chat works without running our own server. -->
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+  </head>
+  <body>
+    <!-- Lobby where the user picks a nickname and room name -->
+    <div id="join-container" class="join-container">
+      <h1>Welcome to Chat</h1>
+      <p class="subtitle">Enter your name and choose a room to begin.</p>
+      <input
+        type="text"
+        id="usernameInput"
+        placeholder="Your name"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        id="roomInput"
+        placeholder="Room name"
+        autocomplete="off"
+      />
+      <button id="joinBtn">Join Room</button>
+    </div>
+
+    <!-- Chat interface; hidden until a room is joined -->
+    <div id="chat-container" class="chat hidden">
+      <div class="chat-header">
+        <h2 id="roomTitle">Room</h2>
+        <button id="leaveBtn" class="leave-button">Leave</button>
+      </div>
+      <div id="messages" class="messages"></div>
+      <div class="input-area">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Type your message..."
+          autocomplete="off"
+        />
+        <button id="sendBtn" class="send-button">Send</button>
+      </div>
+    </div>
+
+    <!-- Application logic lives in this file -->
+    <script src="app.js"></script>
+  </body>
+</html>
