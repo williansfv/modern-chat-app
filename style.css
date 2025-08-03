@@ -1,0 +1,177 @@
+/* Global resets and typography */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #343a40;
+}
+
+/* Utility to hide elements */
+.hidden {
+  display: none !important;
+}
+
+/* Lobby container styling */
+.join-container {
+  max-width: 400px;
+  margin: 8% auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.join-container h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.join-container .subtitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.join-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.join-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.join-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Chat interface container */
+.chat {
+  max-width: 700px;
+  height: 80vh;
+  margin: 4% auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header bar with room title */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.leave-button {
+  background: #dc3545;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.leave-button:hover {
+  background: #c82333;
+}
+
+/* Scrollable message display area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+/* Individual message styling */
+.message {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.message .user {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #007bff;
+}
+
+.message .text {
+  display: block;
+  margin-top: 4px;
+  word-wrap: break-word;
+}
+
+.message .time {
+  display: block;
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+/* Input area for sending messages */
+.input-area {
+  display: flex;
+  padding: 10px 20px;
+  border-top: 1px solid #dee2e6;
+  background: #fff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.send-button {
+  background: #28a745;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.send-button:hover {
+  background: #218838;
+}
