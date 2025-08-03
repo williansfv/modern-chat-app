@@ -33,7 +33,13 @@
     // offered by the GUN team is suitable for simple prototypes and learning
     // projects. Production apps should run their own peer for reliability.
     gun = Gun({
-      peers: ['https://gun-manhattan.herokuapp.com/gun'],
+      // Use our own GUN relay first for reliability. Include the original
+      // Manhattan relay as a backup peer in case our relay is down. GUN will
+      // automatically try each peer until a connection is established.
+      peers: [
+        'https://gun-relay-server-pl4c.onrender.com/gun',
+        'https://gun-manhattan.herokuapp.com/gun',
+      ],
     });
 
     // Create/get a node for the chat room under the "chats" top‑level node
